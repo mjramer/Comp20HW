@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Joe's Hotdogs Stand</title>
+	<style type="text/css">
+		.info {
+			display: block;
+			padding: 10px 5px;
+			font-size: 20px;
+		}
+		table {
+			margin: 30px 30px
+		}
+
+	</style>
+</head>
+
+<script language="javascript">
+	prices     = {'hotdogs': 3.25, 'fries': 2.00, 'drinks': 1.50};
+	quantities = {'hotdogs': 0, 'fries': 0, 'drinks': 0};
+	cost       = {'hotdogs': 0.0, 'fries': 0.0, 'drinks': 0.0};
+</script>
+<body>
+	<form>
+		<h2>Enter quantity of order:</h2>
+		<div class="info">Hotdogs: &nbsp <input type="text" name="hotdogs" id="hotdogs" size="3"></div>
+		<div class="info">French Fries: &nbsp <input type="text" name="fries" id="fries" size="3"></div>
+		<div class="info">Drinks: &nbsp <input type="text" name="drinks" id="drinks" size="3"></div>
+		<input type="button" onclick="calcOrderTotal()" value="Order">
+	</form>
+	<script language="javascript">
+		function calcOrderTotal()
+		{
+			quantities['hotdogs'] = document.getElementById("hotdogs").value;
+			quantities['fries'] = document.getElementById("fries").value;
+			quantities['drinks'] = document.getElementById("drinks").value;
+
+			cost['hotdogs'] = (quantities['hotdogs'] * prices['hotdogs']);
+			cost['fries'] = (quantities['fries'] * prices['fries']);
+			cost['drinks'] = (quantities['drinks'] * prices['drinks']);
+			subtotal = (parseFloat(cost['hotdogs']) + parseFloat(cost['fries']) + parseFloat(cost['drinks'])).toFixed(2);
+			tax = .0625;
+			discount = .10;
+
+			beforeTax = subtotal;
+			discountCost = (0.00).toFixed(2);
+			if (subtotal >= 20.00) {
+				beforeTax = subtotal * (1 - discount);
+				discountCost = (subtotal * discount).toFixed(2);
+			}
+			total = beforeTax * (1 - tax);
+			taxCost = (beforeTax * tax).toFixed(2);
+			total = total.toFixed(2);
+			alertStr1 = "Hotdogs: " + quantities['hotdogs'] + " - $" + cost['hotdogs'].toFixed(2) + "\nFrench Fries: " + quantities['fries'] + " - $" + cost['fries'].toFixed(2) + "\nDrinks: " + quantities['drinks'] + " - $" + cost['drinks'].toFixed(2);
+			alertNewLine = "\n--------------------------------";
+			alertStr2 = "\nSubtotal: $" + subtotal + "\nDiscount ($20+ only): $" + discountCost + "\nTax: $" + taxCost;
+			alert(alertStr1 + alertNewLine + alertStr2 + alertNewLine + "\nTotal: $" + total);
+		}
+
+	</script>
+</body>
+</html>

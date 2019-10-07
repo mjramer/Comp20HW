@@ -1,0 +1,38 @@
+Title {
+	font-family: "comic sans MS", times;
+	color: white;
+	background-color: black;
+	font-size: 30px;
+	display: block;
+	text-align: left;
+}
+
+Genre {
+	font-family: times;
+	color: white;
+	font-size: 25px;
+	display: block;
+	border: 5px solid orange;
+	padding-left: 60px;
+	background-color: gray;
+}
+
+Artist {
+	font-family: helvetica, arial;
+	font-size: 20px;
+	color: white;
+	display: block;
+	font-style: bold;
+	background-color: green;
+	padding-left: 120px;
+}
+
+Year {
+	font-family: arial;
+	font-size: 20px;
+	font-weight: bold;
+	padding-left: 200px;
+	display: block;
+	border-bottom: 3px solid red;
+	border-top: 3px solid red;
+}

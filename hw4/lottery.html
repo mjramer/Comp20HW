@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Quick Pick</title>
+	<style type="text/css">
+		h2 {
+			padding-bottom: 0px;
+			text-align: center;
+		}
+		h4 {
+			display: inline-block;
+			margin-left: 5px;
+			margin-bottom: 0;
+			text-align: center;
+		}
+	</style>
+</head>
+
+<script language="javascript">
+	function randomNum(min, max, numbers)
+	{
+		rand = Math.floor(Math.random() * max) + min;
+		if (max != 18) {
+			while (!(numbers.indexOf(rand) === -1))
+				rand = Math.floor(Math.random() * max) + min;
+		}
+		return rand;
+	}
+	length = 6;
+	numbers = new Array(length);
+	document.write("<h2>Today's Mass Lottery \"Lucky for  Life\" Numbers:</h2>");
+	document.write("<h4>Unsorted: &nbsp</h4>"); 
+	for (i = 0; i < length; i++) {
+		if (i < length - 2) {
+			numbers[i] = randomNum(1, 48, numbers);
+			document.write("<h4>" + numbers[i] + ", &nbsp </h4>");
+		}
+		else if (i < length - 1) {
+			numbers[i] = randomNum(1, 48, numbers);
+			document.write("<h4>" + numbers[i] + "&nbsp&nbsp </h4>");
+		}
+		else {
+			numbers[i] = randomNum(1, 18);
+			document.write("<h4>Lucky Ball: " + numbers[i] + "&nbsp&nbsp </h4><br>");
+		}
+	}
+	document.write("<h4>\nSorted: &nbsp&nbsp&nbsp&nbsp&nbsp</h4>"); 
+	for (a = 0; a < length - 1; a++) {
+		for (b = a; b < length - 1; b++) {
+			if (numbers[a] > numbers[b]) {
+				temp = numbers[a];
+				numbers[a] = numbers[b];
+				numbers[b] = temp;
+			}
+		}
+		if (a < length - 2)
+			document.write("<h4>" + numbers[a] + ", &nbsp </h4>")
+		else
+			document.write("<h4>" + numbers[a] + "&nbsp&nbsp </h4>")
+	}
+	document.write("<h4>Lucky Ball: " + numbers[a] + "&nbsp&nbsp </h4><br>");
+
+</script>
+
+<body>
+	<form method="get">
+		<input style="margin-top: 20px;" type="text" name="5nums" id="5nums" placeholder="Five Numbers" size="15">
+		<input type="text" name="luckyBall" id="luckyBall" placeholder="Lucky Ball" size="8">
+		<input type="button" onclick="calculatePayout()" value="Calculate">
+	</form>
+	<script language="javascript">
+		function calculatePayout()
+		{
+			matches = {'regBall': 0, 'luckyBall': 0};
+			nums = document.getElementById("5nums").value;
+			winningNums = nums.match(/\d+/g).map(Number).sort();
+			luckyball = document.getElementById("luckyBall").value;
+			for (a = 0; a < winningNums.length; a++) {
+				for (b = 0; b < winningNums.length; b++) {
+					if (numbers[a] == winningNums[b]) {
+						matches.regBall += 1;
+						b = winningNums.length;
+					}
+				}
+			}
+			if (numbers[numbers.length - 1] == luckyball)
+				matches.luckyBall += 1;
+			payout = {'combos':['01','11','20','21','30','31','40','41','50','51'], 'winnings':['$4','$6','$3','$25','$20','$150','$200','$5,000','$25,000 a YEAR for LIFE!','$7,000 a WEEK for LIFE!']};
+			matchStr = matches.regBall.toString(10) + matches.luckyBall.toString(10);
+			winStr = "$0";
+			for (i = 0; i < payout.combos.length; i++) {
+				if (payout.combos[i] == matchStr)
+					winStr = payout.winnings[i];
+			}
+			alert("Your winnings: " + winStr);
+		}
+	</script>
+</body>
+</html>

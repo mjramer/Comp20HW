@@ -1,0 +1,80 @@
+<?xml version ="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="style.css"?>
+<SetList>
+	<Song>
+		<Title>Shape of You</Title>
+		<Genre>Pop</Genre>
+		<Artist>Ed Sheeran</Artist>
+		<Year>2017</Year>
+	</Song>
+	<Song>
+		<Title>Old Town Road</Title>
+		<Genre>Country rap</Genre>
+		<Artist>Lil Nas X</Artist>
+		<Year>2019</Year>
+	</Song>
+	<Song>
+		<Title>Baby</Title>
+		<Genre>Pop</Genre>
+		<Artist>Justin Bieber</Artist>
+		<Year>2010</Year>
+	</Song>
+	<Song>
+		<Title>Sir Duke</Title>
+		<Genre>Jazz</Genre>
+		<Artist>Stevie Wonder</Artist>
+		<Year>1976</Year>
+	</Song>
+	<Song>
+		<Title>Sicko Mode</Title>
+		<Genre>Hip Hop</Genre>
+		<Artist>Kendrick Lamar</Artist>
+		<Year>2018</Year>
+	</Song>
+	<Song>
+		<Title>Careless Whisper</Title>
+		<Genre>Jazz</Genre>
+		<Artists>
+			<Artist>George Michael</Artist>
+			<Artist>Andrew Ridgeley</Artist>
+		</Artists>
+		<Year>1984</Year>
+	</Song>
+	<Song>
+		<Title>We Are the Champions</Title>
+		<Genre>Classic Rock</Genre>
+		<Artists>
+			<Artist>Freddie Merucry</Artist>
+			<Artist>Brian May</Artist>
+			<Artist>John Deacon</Artist>
+			<Artist>Roger Taylor</Artist>
+			<Artist>Mike Grose</Artist>
+			<Artist>Bary Mitchell</Artist>
+		</Artists>
+		<Year>1977</Year>
+	</Song>
+	<Song>
+		<Title>Take the A Train</Title>
+		<Genre>Jazz</Genre>
+		<Artist>Duke Ellington</Artist>
+		<Year>1952</Year>
+	</Song>
+	<Song>
+		<Title>The Sound of Silence</Title>
+		<Genre>Folk</Genre>
+		<Artists>
+			<Artist>Paul Simon</Artist>
+			<Artist>Art Garfunkel</Artist>
+		</Artists>
+		<Year>1964</Year>
+	</Song>
+	<Song>
+		<Title>Mrs. Robinson</Title>
+		<Genre>Folk</Genre>
+		<Artists>
+			<Artist>Paul Simon</Artist>
+			<Artist>Art Garfunkel</Artist>
+		</Artists>
+		<Year>1968</Year>
+	</Song>
+</SetList>
