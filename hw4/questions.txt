@@ -1,0 +1,10 @@
+Questions regarding the Lottery assignment:
+
+1. If I had more time, I would make the site more visually pleasing and add a theme.  I'd also add some animation and responsiveness to the site.
+
+2. The best thing I like about javascript is not having to declare data types when assigning variables.
+
+
+
+Link to Lottery Site: https://mjramer.github.io/comp20HW4lottery/
+Link to Joe's Site: https://mjramer.github.io/comp20HW4joes/
