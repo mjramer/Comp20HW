@@ -1,0 +1,19 @@
+Max Ramer
+11/5/19
+Comp 20
+Homework 7
+
+
+Link to HW7 site: https://mjramer.github.io/Comp20HW7/
+
+Files included:
+
+hw7.html:  contains general html to setup the site, includes jquery to update
+		   table based on user-selected drop down option
+
+data.js:   songList data is created and formatted in JSON, converted to song
+		   objects, and written to page. Each table row is in a class
+		   corresponding to its genre, which makes it easy to display all songs
+		   with the same genre.
+
+style.css: css stylesheet for main html page.
